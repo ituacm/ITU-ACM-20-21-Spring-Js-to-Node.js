@@ -18,7 +18,7 @@ function tree(level) {
   }
 
   const starCount = Math.floor(level / 4);
-  for (let i = 0; i < Math.floor(level / 3); i++) {
+  for (let i = 0; i < level / 3; i++) {
     writeChars(".", level - starCount);
     writeChars("*", starCount);
     writeChars(".", level - starCount);
