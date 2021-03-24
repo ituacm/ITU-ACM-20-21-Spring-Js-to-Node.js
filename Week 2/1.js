@@ -10,7 +10,7 @@ console.log(user);
 console.log(user.id, user.name, user.createdAt);
 console.log(user["id"], user["name"], user["createdAt"]);
 
-user.additionalProperty = true;
-user.name = "Not Onurcan";
+//user.additionalProperty = true;
+//user.name = "Not Onurcan";
 
-console.log(user);
+//console.log(user);
