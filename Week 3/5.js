@@ -1,9 +1,15 @@
 // closure
 
+const generatedIds = new Set();
+
 function randomId() {
-  const r = Math.random(); // 0-1
-  const idNum = Math.floor(r * 100000);
-  return `ID_${idNum}`;
+  let id = null;
+  do {
+    const r = Math.random(); // 0-1
+    const idNum = Math.floor(r * 100000);
+    id = `ID_${idNum}`;
+  } while (generatedIds.has(id));
+  return id;
 }
 
 console.log(randomId(), randomId());

@@ -22,5 +22,6 @@ const arr = [
 console.log(arr);
 
 const biggerThan3 = arr.filter((el) => el.val > 3);
+const biggerThanBool = arr.map((el) => el.val > 3);
 
-console.log(biggerThan3);
+console.log(biggerThan3, biggerThanBool);

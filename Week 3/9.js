@@ -24,4 +24,14 @@ const sum = arr.reduce((acc, el) => {
   return acc + el.val;
 }, 0);
 
-console.log(sum);
+const map = arr.reduce((m, el) => {
+  m[el.name] = el.val;
+  return m;
+}, {});
+
+const m2 = {};
+arr.map((el) => {
+  m2[el.name] = el.val;
+});
+
+console.log(sum, map, m2);

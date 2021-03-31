@@ -1,5 +1,5 @@
 // map
-
+// map filter reduce
 const arr = [
   {
     val: 1,
