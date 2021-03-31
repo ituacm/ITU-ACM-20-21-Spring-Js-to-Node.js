@@ -7,6 +7,7 @@ while (true) {
   }
 
   const parts = input.split(",");
+  console.log(parts);
   obj[parts[0]] = parts[1];
   console.log(obj);
 }

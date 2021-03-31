@@ -8,10 +8,14 @@ const validJson = {
   },
   e: true,
   f: null,
+  fn: function test() {
+    console.log("test");
+  },
 };
 
 console.log(validJson);
 const str = JSON.stringify(validJson);
+validJson.fn();
 console.log(str);
 
 const parsed = JSON.parse(str);
