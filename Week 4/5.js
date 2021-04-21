@@ -20,16 +20,16 @@ async function fetchHelloAndLog(ms = 0) {
 async function main() {
   const requests = [];
   for (let i = 0; i < 10; i++) {
-    requests.push(fetchHelloAndLog(1000));
+    requests.push(fetchHelloAndLog(0));
   }
 
   console.log("Start blocking thread");
-  alert("Your thread is now blocked");
-  //let ct = 0;
-  //for (let i = 0; i < 10000000000; i++) {
-  //ct++;
-  //}
-  //console.log(ct);
+  //alert("Your thread is now blocked");
+  let ct = 0;
+  for (let i = 0; i < 1000000000; i++) {
+    ct++;
+  }
+  console.log(ct);
 
   await Promise.all(requests);
   console.log("All completed");

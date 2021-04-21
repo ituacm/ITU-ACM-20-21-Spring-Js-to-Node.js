@@ -6,10 +6,6 @@ function main() {
   app.use(cors({ origin: "*" }));
   app.use(express.json());
 
-  app.all("/test", async (req, res) => {
-    res.json({ ok: true });
-  });
-
   app.all("/hello", async (req, res) => {
     const ms = req.body.ms;
     if (ms) {

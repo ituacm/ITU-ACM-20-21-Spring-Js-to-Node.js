@@ -13,7 +13,8 @@ async function fetchHello(ms = 0) {
 }
 
 async function main() {
-  const result = await fetchHello(1000);
+  //----
+  const result = await fetchHello(5000);
   console.log(result);
 }
 

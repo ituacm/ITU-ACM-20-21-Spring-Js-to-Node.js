@@ -15,13 +15,15 @@ async function fetchHello(ms = 0) {
 async function fetchHelloAndLog(ms = 0) {
   const result = await fetchHello(ms);
   console.log(result);
+  return result;
 }
 
 async function main() {
   const requests = [];
   for (let i = 0; i < 10; i++) {
-    requests.push(fetchHelloAndLog(1000));
+    requests.push(fetchHelloAndLog(3000));
   }
+  console.log(requests);
 
   console.log("Waiting requests");
   await Promise.all(requests);

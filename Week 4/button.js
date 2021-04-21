@@ -24,7 +24,7 @@ document.getElementById("btn-fetch").addEventListener("click", async () => {
 document.getElementById("btn-block").addEventListener("click", async () => {
   console.log("Blocking start");
   let ct = 0;
-  for (let i = 0; i < 10000000000; i++) {
+  for (let i = 0; i < 5000000000; i++) {
     ct++;
   }
   console.log("Blocking end", ct);

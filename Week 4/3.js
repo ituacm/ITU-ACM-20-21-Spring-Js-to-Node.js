@@ -12,18 +12,18 @@ async function fetchHello(ms = 0) {
   return myFetch("/hello", { ms: ms });
 }
 
-async function fetchHelloAndLog(ms = 0) {
+async function fetchHelloAndLog(ms = 0, id = 0) {
   const result = await fetchHello(ms);
-  console.log(result);
+  console.log(result, id);
 }
 
 async function main() {
   for (let i = 0; i < 10; i++) {
-    await fetchHelloAndLog(1000);
+    //await fetchHelloAndLog(1000, i);
   }
 
   for (let i = 0; i < 10; i++) {
-    //fetchHelloAndLog(1000);
+    fetchHelloAndLog(1000, i);
   }
 }
 

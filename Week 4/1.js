@@ -8,4 +8,12 @@ async function myFetch(url, data = {}) {
   }).then((res) => res.json());
 }
 
-myFetch("/hello", { ms: 1000 }).then(console.log);
+const fetchResultPromise = myFetch("/hello", { ms: 1000 });
+
+fetchResultPromise
+  .then((data) => {
+    console.log("Received Data", data);
+  })
+  .then(() => {
+    console.log("Finished");
+  });
