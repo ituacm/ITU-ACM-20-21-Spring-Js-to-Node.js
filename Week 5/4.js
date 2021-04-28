@@ -48,6 +48,10 @@ const mySerializableBase = {
   deserialize(str) {
     const obj = JSON.parse(str);
     Object.assign(this, obj);
+
+    // for (const key in obj) {
+    //   this[key] = obj[key];
+    // }
   },
 };
 
